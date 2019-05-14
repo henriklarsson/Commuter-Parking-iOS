@@ -1,0 +1,595 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */; };
+		FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B74228AAE48008BB1CC /* ViewController.swift */; };
+		FDCA6B78228AAE48008BB1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6B76228AAE48008BB1CC /* Main.storyboard */; };
+		FDCA6B7A228AAE4A008BB1CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6B79228AAE4A008BB1CC /* Assets.xcassets */; };
+		FDCA6B7D228AAE4A008BB1CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */; };
+		FDCA6B88228AAE4A008BB1CC /* PendelParkeringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B87228AAE4A008BB1CC /* PendelParkeringTests.swift */; };
+		FDCA6B93228AAE4A008BB1CC /* PendelParkeringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */; };
+		FDCA6BA1228ABE37008BB1CC /* ParkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FDCA6B84228AAE4A008BB1CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDCA6B67228AAE48008BB1CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDCA6B6E228AAE48008BB1CC;
+			remoteInfo = PendelParkering;
+		};
+		FDCA6B8F228AAE4A008BB1CC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FDCA6B67228AAE48008BB1CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FDCA6B6E228AAE48008BB1CC;
+			remoteInfo = PendelParkering;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FDCA6B6F228AAE48008BB1CC /* PendelParkering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PendelParkering.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDCA6B74228AAE48008BB1CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FDCA6B77228AAE48008BB1CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FDCA6B79228AAE4A008BB1CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FDCA6B7C228AAE4A008BB1CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FDCA6B7E228AAE4A008BB1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA6B83228AAE4A008BB1CC /* PendelParkeringTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PendelParkeringTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA6B87228AAE4A008BB1CC /* PendelParkeringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendelParkeringTests.swift; sourceTree = "<group>"; };
+		FDCA6B89228AAE4A008BB1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA6B8E228AAE4A008BB1CC /* PendelParkeringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PendelParkeringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendelParkeringUITests.swift; sourceTree = "<group>"; };
+		FDCA6B94228AAE4A008BB1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FDCA6B6C228AAE48008BB1CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA6B80228AAE4A008BB1CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA6B8B228AAE4A008BB1CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FDCA6B66228AAE48008BB1CC = {
+			isa = PBXGroup;
+			children = (
+				FDCA6B71228AAE48008BB1CC /* PendelParkering */,
+				FDCA6B86228AAE4A008BB1CC /* PendelParkeringTests */,
+				FDCA6B91228AAE4A008BB1CC /* PendelParkeringUITests */,
+				FDCA6B70228AAE48008BB1CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FDCA6B70228AAE48008BB1CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA6B6F228AAE48008BB1CC /* PendelParkering.app */,
+				FDCA6B83228AAE4A008BB1CC /* PendelParkeringTests.xctest */,
+				FDCA6B8E228AAE4A008BB1CC /* PendelParkeringUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FDCA6B71228AAE48008BB1CC /* PendelParkering */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */,
+				FDCA6B74228AAE48008BB1CC /* ViewController.swift */,
+				FDCA6B76228AAE48008BB1CC /* Main.storyboard */,
+				FDCA6B79228AAE4A008BB1CC /* Assets.xcassets */,
+				FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */,
+				FDCA6B7E228AAE4A008BB1CC /* Info.plist */,
+				FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */,
+			);
+			path = PendelParkering;
+			sourceTree = "<group>";
+		};
+		FDCA6B86228AAE4A008BB1CC /* PendelParkeringTests */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA6B87228AAE4A008BB1CC /* PendelParkeringTests.swift */,
+				FDCA6B89228AAE4A008BB1CC /* Info.plist */,
+			);
+			path = PendelParkeringTests;
+			sourceTree = "<group>";
+		};
+		FDCA6B91228AAE4A008BB1CC /* PendelParkeringUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */,
+				FDCA6B94228AAE4A008BB1CC /* Info.plist */,
+			);
+			path = PendelParkeringUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FDCA6B6E228AAE48008BB1CC /* PendelParkering */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA6B97228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkering" */;
+			buildPhases = (
+				FDCA6B6B228AAE48008BB1CC /* Sources */,
+				FDCA6B6C228AAE48008BB1CC /* Frameworks */,
+				FDCA6B6D228AAE48008BB1CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PendelParkering;
+			productName = PendelParkering;
+			productReference = FDCA6B6F228AAE48008BB1CC /* PendelParkering.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FDCA6B82228AAE4A008BB1CC /* PendelParkeringTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA6B9A228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkeringTests" */;
+			buildPhases = (
+				FDCA6B7F228AAE4A008BB1CC /* Sources */,
+				FDCA6B80228AAE4A008BB1CC /* Frameworks */,
+				FDCA6B81228AAE4A008BB1CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDCA6B85228AAE4A008BB1CC /* PBXTargetDependency */,
+			);
+			name = PendelParkeringTests;
+			productName = PendelParkeringTests;
+			productReference = FDCA6B83228AAE4A008BB1CC /* PendelParkeringTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FDCA6B8D228AAE4A008BB1CC /* PendelParkeringUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDCA6B9D228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkeringUITests" */;
+			buildPhases = (
+				FDCA6B8A228AAE4A008BB1CC /* Sources */,
+				FDCA6B8B228AAE4A008BB1CC /* Frameworks */,
+				FDCA6B8C228AAE4A008BB1CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FDCA6B90228AAE4A008BB1CC /* PBXTargetDependency */,
+			);
+			name = PendelParkeringUITests;
+			productName = PendelParkeringUITests;
+			productReference = FDCA6B8E228AAE4A008BB1CC /* PendelParkeringUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FDCA6B67228AAE48008BB1CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Larsson, Henrik (94777)";
+				TargetAttributes = {
+					FDCA6B6E228AAE48008BB1CC = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					FDCA6B82228AAE4A008BB1CC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FDCA6B6E228AAE48008BB1CC;
+					};
+					FDCA6B8D228AAE4A008BB1CC = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = FDCA6B6E228AAE48008BB1CC;
+					};
+				};
+			};
+			buildConfigurationList = FDCA6B6A228AAE48008BB1CC /* Build configuration list for PBXProject "PendelParkering" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FDCA6B66228AAE48008BB1CC;
+			productRefGroup = FDCA6B70228AAE48008BB1CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FDCA6B6E228AAE48008BB1CC /* PendelParkering */,
+				FDCA6B82228AAE4A008BB1CC /* PendelParkeringTests */,
+				FDCA6B8D228AAE4A008BB1CC /* PendelParkeringUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FDCA6B6D228AAE48008BB1CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA6B7D228AAE4A008BB1CC /* LaunchScreen.storyboard in Resources */,
+				FDCA6B7A228AAE4A008BB1CC /* Assets.xcassets in Resources */,
+				FDCA6B78228AAE48008BB1CC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA6B81228AAE4A008BB1CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA6B8C228AAE4A008BB1CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FDCA6B6B228AAE48008BB1CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */,
+				FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */,
+				FDCA6BA1228ABE37008BB1CC /* ParkingTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA6B7F228AAE4A008BB1CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA6B88228AAE4A008BB1CC /* PendelParkeringTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FDCA6B8A228AAE4A008BB1CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FDCA6B93228AAE4A008BB1CC /* PendelParkeringUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FDCA6B85228AAE4A008BB1CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDCA6B6E228AAE48008BB1CC /* PendelParkering */;
+			targetProxy = FDCA6B84228AAE4A008BB1CC /* PBXContainerItemProxy */;
+		};
+		FDCA6B90228AAE4A008BB1CC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FDCA6B6E228AAE48008BB1CC /* PendelParkering */;
+			targetProxy = FDCA6B8F228AAE4A008BB1CC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FDCA6B76228AAE48008BB1CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDCA6B77228AAE48008BB1CC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FDCA6B7C228AAE4A008BB1CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FDCA6B95228AAE4A008BB1CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FDCA6B96228AAE4A008BB1CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FDCA6B98228AAE4A008BB1CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N3G44L4KU;
+				INFOPLIST_FILE = PendelParkering/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = h.larsson.PendelParkering;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FDCA6B99228AAE4A008BB1CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9N3G44L4KU;
+				INFOPLIST_FILE = PendelParkering/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = h.larsson.PendelParkering;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FDCA6B9B228AAE4A008BB1CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A482L85MXT;
+				INFOPLIST_FILE = PendelParkeringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = h.larsson.PendelParkeringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PendelParkering.app/PendelParkering";
+			};
+			name = Debug;
+		};
+		FDCA6B9C228AAE4A008BB1CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A482L85MXT;
+				INFOPLIST_FILE = PendelParkeringTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = h.larsson.PendelParkeringTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PendelParkering.app/PendelParkering";
+			};
+			name = Release;
+		};
+		FDCA6B9E228AAE4A008BB1CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A482L85MXT;
+				INFOPLIST_FILE = PendelParkeringUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = h.larsson.PendelParkeringUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PendelParkering;
+			};
+			name = Debug;
+		};
+		FDCA6B9F228AAE4A008BB1CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A482L85MXT;
+				INFOPLIST_FILE = PendelParkeringUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = h.larsson.PendelParkeringUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PendelParkering;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FDCA6B6A228AAE48008BB1CC /* Build configuration list for PBXProject "PendelParkering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA6B95228AAE4A008BB1CC /* Debug */,
+				FDCA6B96228AAE4A008BB1CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA6B97228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkering" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA6B98228AAE4A008BB1CC /* Debug */,
+				FDCA6B99228AAE4A008BB1CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA6B9A228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkeringTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA6B9B228AAE4A008BB1CC /* Debug */,
+				FDCA6B9C228AAE4A008BB1CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDCA6B9D228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkeringUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FDCA6B9E228AAE4A008BB1CC /* Debug */,
+				FDCA6B9F228AAE4A008BB1CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FDCA6B67228AAE48008BB1CC /* Project object */;
+}
