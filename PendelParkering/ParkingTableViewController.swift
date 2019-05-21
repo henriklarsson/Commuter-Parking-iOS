@@ -8,8 +8,9 @@
 
 import UIKit
 
+
 class ParkingTableViewController: UITableViewController {
-    var parkings = ["p1", "p2", "p3"]
+    var parkings = [ParkingLot]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,7 +37,7 @@ class ParkingTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
 
-        cell.textLabel?.text = parkings[indexPath.row]
+        cell.textLabel?.text = parkings[indexPath.row].name
 
         return cell
     }

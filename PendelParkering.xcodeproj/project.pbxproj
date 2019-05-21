@@ -15,6 +15,14 @@
 		FDCA6B88228AAE4A008BB1CC /* PendelParkeringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B87228AAE4A008BB1CC /* PendelParkeringTests.swift */; };
 		FDCA6B93228AAE4A008BB1CC /* PendelParkeringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */; };
 		FDCA6BA1228ABE37008BB1CC /* ParkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */; };
+		FDCA6BA8229278DD008BB1CC /* Models in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6BA7229278DD008BB1CC /* Models */; };
+		FDCA6BB02292797D008BB1CC /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAF2292797D008BB1CC /* Destination.swift */; };
+		FDCA6BB12292797D008BB1CC /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BA92292797C008BB1CC /* ParkingLot.swift */; };
+		FDCA6BB22292797D008BB1CC /* ParkingArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAB2292797C008BB1CC /* ParkingArea.swift */; };
+		FDCA6BB32292797D008BB1CC /* StopArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAE2292797D008BB1CC /* StopArea.swift */; };
+		FDCA6BB42292797D008BB1CC /* ParkingCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAA2292797C008BB1CC /* ParkingCamera.swift */; };
+		FDCA6BB52292797D008BB1CC /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAD2292797D008BB1CC /* Departure.swift */; };
+		FDCA6BB62292797D008BB1CC /* ParkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAC2292797C008BB1CC /* ParkingType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendelParkeringUITests.swift; sourceTree = "<group>"; };
 		FDCA6B94228AAE4A008BB1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTableViewController.swift; sourceTree = "<group>"; };
+		FDCA6BA7229278DD008BB1CC /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		FDCA6BA92292797C008BB1CC /* ParkingLot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLot.swift; sourceTree = "<group>"; };
+		FDCA6BAA2292797C008BB1CC /* ParkingCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingCamera.swift; sourceTree = "<group>"; };
+		FDCA6BAB2292797C008BB1CC /* ParkingArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingArea.swift; sourceTree = "<group>"; };
+		FDCA6BAC2292797C008BB1CC /* ParkingType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingType.swift; sourceTree = "<group>"; };
+		FDCA6BAD2292797D008BB1CC /* Departure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
+		FDCA6BAE2292797D008BB1CC /* StopArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopArea.swift; sourceTree = "<group>"; };
+		FDCA6BAF2292797D008BB1CC /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +115,14 @@
 		FDCA6B71228AAE48008BB1CC /* PendelParkering */ = {
 			isa = PBXGroup;
 			children = (
+				FDCA6BAD2292797D008BB1CC /* Departure.swift */,
+				FDCA6BAF2292797D008BB1CC /* Destination.swift */,
+				FDCA6BAB2292797C008BB1CC /* ParkingArea.swift */,
+				FDCA6BAA2292797C008BB1CC /* ParkingCamera.swift */,
+				FDCA6BA92292797C008BB1CC /* ParkingLot.swift */,
+				FDCA6BAC2292797C008BB1CC /* ParkingType.swift */,
+				FDCA6BAE2292797D008BB1CC /* StopArea.swift */,
+				FDCA6BA7229278DD008BB1CC /* Models */,
 				FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */,
 				FDCA6B74228AAE48008BB1CC /* ViewController.swift */,
 				FDCA6B76228AAE48008BB1CC /* Main.storyboard */,
@@ -234,6 +258,7 @@
 			files = (
 				FDCA6B7D228AAE4A008BB1CC /* LaunchScreen.storyboard in Resources */,
 				FDCA6B7A228AAE4A008BB1CC /* Assets.xcassets in Resources */,
+				FDCA6BA8229278DD008BB1CC /* Models in Resources */,
 				FDCA6B78228AAE48008BB1CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +284,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCA6BB32292797D008BB1CC /* StopArea.swift in Sources */,
 				FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */,
+				FDCA6BB62292797D008BB1CC /* ParkingType.swift in Sources */,
 				FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */,
+				FDCA6BB42292797D008BB1CC /* ParkingCamera.swift in Sources */,
+				FDCA6BB12292797D008BB1CC /* ParkingLot.swift in Sources */,
+				FDCA6BB22292797D008BB1CC /* ParkingArea.swift in Sources */,
+				FDCA6BB52292797D008BB1CC /* Departure.swift in Sources */,
+				FDCA6BB02292797D008BB1CC /* Destination.swift in Sources */,
 				FDCA6BA1228ABE37008BB1CC /* ParkingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
