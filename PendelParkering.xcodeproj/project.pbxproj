@@ -23,6 +23,7 @@
 		FDCA6BB42292797D008BB1CC /* ParkingCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAA2292797C008BB1CC /* ParkingCamera.swift */; };
 		FDCA6BB52292797D008BB1CC /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAD2292797D008BB1CC /* Departure.swift */; };
 		FDCA6BB62292797D008BB1CC /* ParkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAC2292797C008BB1CC /* ParkingType.swift */; };
+		FDCA6BB82293FAF8008BB1CC /* ParkingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		FDCA6BAD2292797D008BB1CC /* Departure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Departure.swift; sourceTree = "<group>"; };
 		FDCA6BAE2292797D008BB1CC /* StopArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopArea.swift; sourceTree = "<group>"; };
 		FDCA6BAF2292797D008BB1CC /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
+		FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */,
 				FDCA6B7E228AAE4A008BB1CC /* Info.plist */,
 				FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */,
+				FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */,
 			);
 			path = PendelParkering;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */,
 				FDCA6BB62292797D008BB1CC /* ParkingType.swift in Sources */,
 				FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */,
+				FDCA6BB82293FAF8008BB1CC /* ParkingCell.swift in Sources */,
 				FDCA6BB42292797D008BB1CC /* ParkingCamera.swift in Sources */,
 				FDCA6BB12292797D008BB1CC /* ParkingLot.swift in Sources */,
 				FDCA6BB22292797D008BB1CC /* ParkingArea.swift in Sources */,

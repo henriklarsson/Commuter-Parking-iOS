@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
     var parkings = [ParkingLot]()
+    @IBOutlet weak var table: UITableView!
+    
 
     override func viewDidLoad() {
 //        super.viewDidLoad()
