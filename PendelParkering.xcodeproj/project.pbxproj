@@ -23,6 +23,8 @@
 		FDCA6BB52292797D008BB1CC /* Departure.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAD2292797D008BB1CC /* Departure.swift */; };
 		FDCA6BB62292797D008BB1CC /* ParkingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAC2292797C008BB1CC /* ParkingType.swift */; };
 		FDCA6BB82293FAF8008BB1CC /* ParkingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */; };
+		FDCA6BBA2295599B008BB1CC /* ParkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BB92295599B008BB1CC /* ParkingService.swift */; };
+		FDCA6BBC2295C4D6008BB1CC /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BBB2295C4D6008BB1CC /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		FDCA6BAE2292797D008BB1CC /* StopArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopArea.swift; sourceTree = "<group>"; };
 		FDCA6BAF2292797D008BB1CC /* Destination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Destination.swift; sourceTree = "<group>"; };
 		FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingCell.swift; sourceTree = "<group>"; };
+		FDCA6BB92295599B008BB1CC /* ParkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingService.swift; sourceTree = "<group>"; };
+		FDCA6BBB2295C4D6008BB1CC /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */,
 				FDCA6B7E228AAE4A008BB1CC /* Info.plist */,
 				FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */,
+				FDCA6BB92295599B008BB1CC /* ParkingService.swift */,
+				FDCA6BBB2295C4D6008BB1CC /* Token.swift */,
 			);
 			path = PendelParkering;
 			sourceTree = "<group>";
@@ -284,8 +290,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDCA6BBA2295599B008BB1CC /* ParkingService.swift in Sources */,
 				FDCA6BB32292797D008BB1CC /* StopArea.swift in Sources */,
 				FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */,
+				FDCA6BBC2295C4D6008BB1CC /* Token.swift in Sources */,
 				FDCA6BB62292797D008BB1CC /* ParkingType.swift in Sources */,
 				FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */,
 				FDCA6BB82293FAF8008BB1CC /* ParkingCell.swift in Sources */,
