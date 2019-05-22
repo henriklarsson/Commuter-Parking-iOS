@@ -8,9 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
+class ViewController: UIViewController  {
     var parkings = [ParkingLot]()
-    @IBOutlet weak var table: UITableView!
+
+    @IBOutlet weak var tableView: UITableView!
     
 
     override func viewDidLoad() {
@@ -23,11 +24,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 //        public var isRestrictedByBarrier: Bool
 //        /** Number of free spaces. Only available if ParkingType Name is SMARTCARPARK */
 //        public var freeSpaces: Int?
+        tableView.delegate = self
+        tableView.dataSource = self
+    
         let parkingType = ParkingType(name: ParkingType.Name.smartcarpark, number: 1)
         let parking1 = ParkingLot.init(name: "ParkingSpaceName", totalCapacity: 2, parkingType: parkingType, lat: Double(2), _id: 3, parkingCameras: nil, lon: Double(3), isRestrictedByBarrier: false, freeSpaces: 2)
         parkings.append(parking1)
         // Do any additional setup after loading the view.
     }
+
+}
+extension ViewController: UITableViewDelegate,UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -39,14 +47,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     
-   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! ParkingCell
         
-        cell.textLabel?.text = parkings[indexPath.row].name
+        cell.title?.text = parkings[indexPath.row].name
         
         return cell
     }
-
-
 }
 

@@ -14,7 +14,6 @@
 		FDCA6B7D228AAE4A008BB1CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */; };
 		FDCA6B88228AAE4A008BB1CC /* PendelParkeringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B87228AAE4A008BB1CC /* PendelParkeringTests.swift */; };
 		FDCA6B93228AAE4A008BB1CC /* PendelParkeringUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */; };
-		FDCA6BA1228ABE37008BB1CC /* ParkingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */; };
 		FDCA6BA8229278DD008BB1CC /* Models in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6BA7229278DD008BB1CC /* Models */; };
 		FDCA6BB02292797D008BB1CC /* Destination.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BAF2292797D008BB1CC /* Destination.swift */; };
 		FDCA6BB12292797D008BB1CC /* ParkingLot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6BA92292797C008BB1CC /* ParkingLot.swift */; };
@@ -57,7 +56,6 @@
 		FDCA6B8E228AAE4A008BB1CC /* PendelParkeringUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PendelParkeringUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA6B92228AAE4A008BB1CC /* PendelParkeringUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendelParkeringUITests.swift; sourceTree = "<group>"; };
 		FDCA6B94228AAE4A008BB1CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTableViewController.swift; sourceTree = "<group>"; };
 		FDCA6BA7229278DD008BB1CC /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
 		FDCA6BA92292797C008BB1CC /* ParkingLot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingLot.swift; sourceTree = "<group>"; };
 		FDCA6BAA2292797C008BB1CC /* ParkingCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingCamera.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				FDCA6B79228AAE4A008BB1CC /* Assets.xcassets */,
 				FDCA6B7B228AAE4A008BB1CC /* LaunchScreen.storyboard */,
 				FDCA6B7E228AAE4A008BB1CC /* Info.plist */,
-				FDCA6BA0228ABE37008BB1CC /* ParkingTableViewController.swift */,
 				FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */,
 			);
 			path = PendelParkering;
@@ -297,7 +294,6 @@
 				FDCA6BB22292797D008BB1CC /* ParkingArea.swift in Sources */,
 				FDCA6BB52292797D008BB1CC /* Departure.swift in Sources */,
 				FDCA6BB02292797D008BB1CC /* Destination.swift in Sources */,
-				FDCA6BA1228ABE37008BB1CC /* ParkingTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
