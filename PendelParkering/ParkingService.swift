@@ -9,11 +9,11 @@
 import Foundation
 
 class ParkingService {
-    // 1
+    
+    var token: Token? = nil
     let defaultSession = URLSession(configuration: .default)
-    // 2
     var dataTask: URLSessionDataTask?
-    func getSearchResults() {
+    func getToken() {
         let url = URL(string: "https://api.vasttrafik.se/token")!
         var request = URLRequest(url: url)
         request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
@@ -39,12 +39,23 @@ class ParkingService {
             }
             
             let responseString = String(data: data, encoding: .utf8)
+            let decoder = JSONDecoder()
+            do {
+                let token = try decoder.decode(Token.self, from: data)
+                print("Success! \(token).")
+            } catch {
+                
+            }
+            
+         
             print("responseString = \(responseString)")
+            
         }
-        
         task.resume()
-        
-
+    }
+    
+    func isTokenValid() -> Bool {
+        return false
     }
 
 }

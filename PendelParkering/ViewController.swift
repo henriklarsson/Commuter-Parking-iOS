@@ -31,7 +31,7 @@ class ViewController: UIViewController  {
         let parking1 = ParkingLot.init(name: "ParkingSpaceName", totalCapacity: 2, parkingType: parkingType, lat: Double(2), _id: 3, parkingCameras: nil, lon: Double(3), isRestrictedByBarrier: false, freeSpaces: 2)
         parkings.append(parking1)
         let ps = ParkingService()
-        ps.getSearchResults()
+        ps.getToken()
         
         // Do any additional setup after loading the view.
     }
