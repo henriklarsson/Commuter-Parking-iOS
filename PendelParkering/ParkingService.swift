@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Alamofire
 
 class ParkingService {
     
@@ -46,12 +47,35 @@ class ParkingService {
             } catch {
                 
             }
-            
-         
             print("responseString = \(responseString)")
             
         }
         task.resume()
+    }
+    
+    func getParkings(){
+        guard let url = URL(string: "https://api.vasttrafik.se/spp/v3/parking") else {
+            
+            return
+        }
+        
+        Alamofire.request(url,
+                          method: .get,
+                          parameters: ["format": "json", "max": 30] )
+            .validate()
+            .responseJSON { response in
+                guard response.result.isSuccess else {
+                    print("Error while fetching remote rooms: \(String(describing: response.result.error)")
+                        completion(nil)
+                    return
+        
+//        @GET("/spp/v3/parkings")
+//        fun getParkingSpacesAsync(@Header("Authorization" ) authorization: String,
+//        @Query("format") format: String = "json",
+//        @Query( "lat") lat: Double? = null,
+//        @Query( "lon") lon: Double? = null,
+//        @Query("dist") dist: Int? = null,
+//        @Query("max") max: Int? = null): Deferred<Response<List<ParkingArea>>>
     }
     
     func isTokenValid() -> Bool {

@@ -1,0 +1,6 @@
+framework module Pods_PendelParkeringUITests {
+  umbrella header "Pods-PendelParkeringUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

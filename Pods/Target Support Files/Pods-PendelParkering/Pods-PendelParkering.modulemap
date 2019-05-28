@@ -1,0 +1,6 @@
+framework module Pods_PendelParkering {
+  umbrella header "Pods-PendelParkering-umbrella.h"
+
+  export *
+  module * { export * }
+}

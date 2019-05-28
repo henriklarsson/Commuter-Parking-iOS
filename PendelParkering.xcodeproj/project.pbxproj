@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		37CCE2936B8CE52D9A596A56 /* Pods_PendelParkering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2209C7FB629C23FA41134083 /* Pods_PendelParkering.framework */; };
+		860F05E4DA02FB729A1A109F /* Pods_PendelParkeringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38395F0AAFA3597D77EC2929 /* Pods_PendelParkeringTests.framework */; };
+		DFF1C9D85F10BA3B7DF80EC7 /* Pods_PendelParkeringUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0A8C20752D3A2999D8D42 /* Pods_PendelParkeringUITests.framework */; };
 		FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */; };
 		FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B74228AAE48008BB1CC /* ViewController.swift */; };
 		FDCA6B78228AAE48008BB1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6B76228AAE48008BB1CC /* Main.storyboard */; };
@@ -45,6 +48,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0775F94DB5C91C44B9A6F46B /* Pods-PendelParkeringUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkeringUITests.debug.xcconfig"; path = "Target Support Files/Pods-PendelParkeringUITests/Pods-PendelParkeringUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2209C7FB629C23FA41134083 /* Pods_PendelParkering.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PendelParkering.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38395F0AAFA3597D77EC2929 /* Pods_PendelParkeringTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PendelParkeringTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E458DBFE1BA63881A9C78B3 /* Pods-PendelParkeringUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkeringUITests.release.xcconfig"; path = "Target Support Files/Pods-PendelParkeringUITests/Pods-PendelParkeringUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A0BA870F0A65C57C852F35E /* Pods-PendelParkering.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkering.debug.xcconfig"; path = "Target Support Files/Pods-PendelParkering/Pods-PendelParkering.debug.xcconfig"; sourceTree = "<group>"; };
+		BF13FA5E647E67BE3A7567DB /* Pods-PendelParkeringTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkeringTests.debug.xcconfig"; path = "Target Support Files/Pods-PendelParkeringTests/Pods-PendelParkeringTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D4C0A8C20752D3A2999D8D42 /* Pods_PendelParkeringUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PendelParkeringUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD66412FE3ABDAD2857CC983 /* Pods-PendelParkering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkering.release.xcconfig"; path = "Target Support Files/Pods-PendelParkering/Pods-PendelParkering.release.xcconfig"; sourceTree = "<group>"; };
+		E282578CE9B92B732A025CB0 /* Pods-PendelParkeringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkeringTests.release.xcconfig"; path = "Target Support Files/Pods-PendelParkeringTests/Pods-PendelParkeringTests.release.xcconfig"; sourceTree = "<group>"; };
 		FDCA6B6F228AAE48008BB1CC /* PendelParkering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PendelParkering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCA6B74228AAE48008BB1CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CCE2936B8CE52D9A596A56 /* Pods_PendelParkering.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				860F05E4DA02FB729A1A109F /* Pods_PendelParkeringTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,12 +104,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF1C9D85F10BA3B7DF80EC7 /* Pods_PendelParkeringUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65E1C205AB1C0CC3C8C95359 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A0BA870F0A65C57C852F35E /* Pods-PendelParkering.debug.xcconfig */,
+				DD66412FE3ABDAD2857CC983 /* Pods-PendelParkering.release.xcconfig */,
+				BF13FA5E647E67BE3A7567DB /* Pods-PendelParkeringTests.debug.xcconfig */,
+				E282578CE9B92B732A025CB0 /* Pods-PendelParkeringTests.release.xcconfig */,
+				0775F94DB5C91C44B9A6F46B /* Pods-PendelParkeringUITests.debug.xcconfig */,
+				4E458DBFE1BA63881A9C78B3 /* Pods-PendelParkeringUITests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		68FD71ED17A214053188BC2A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2209C7FB629C23FA41134083 /* Pods_PendelParkering.framework */,
+				38395F0AAFA3597D77EC2929 /* Pods_PendelParkeringTests.framework */,
+				D4C0A8C20752D3A2999D8D42 /* Pods_PendelParkeringUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FDCA6B66228AAE48008BB1CC = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +142,8 @@
 				FDCA6B86228AAE4A008BB1CC /* PendelParkeringTests */,
 				FDCA6B91228AAE4A008BB1CC /* PendelParkeringUITests */,
 				FDCA6B70228AAE48008BB1CC /* Products */,
+				65E1C205AB1C0CC3C8C95359 /* Pods */,
+				68FD71ED17A214053188BC2A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,9 +206,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDCA6B97228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkering" */;
 			buildPhases = (
+				065FB699622839C2EA108D61 /* [CP] Check Pods Manifest.lock */,
 				FDCA6B6B228AAE48008BB1CC /* Sources */,
 				FDCA6B6C228AAE48008BB1CC /* Frameworks */,
 				FDCA6B6D228AAE48008BB1CC /* Resources */,
+				93F7C36B34A66B15A02FDE7E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -182,6 +225,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDCA6B9A228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkeringTests" */;
 			buildPhases = (
+				EEFBBA2324CCDAB1D6FA2D7F /* [CP] Check Pods Manifest.lock */,
 				FDCA6B7F228AAE4A008BB1CC /* Sources */,
 				FDCA6B80228AAE4A008BB1CC /* Frameworks */,
 				FDCA6B81228AAE4A008BB1CC /* Resources */,
@@ -200,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDCA6B9D228AAE4A008BB1CC /* Build configuration list for PBXNativeTarget "PendelParkeringUITests" */;
 			buildPhases = (
+				E7FFE4D5BE9663AA63744EB2 /* [CP] Check Pods Manifest.lock */,
 				FDCA6B8A228AAE4A008BB1CC /* Sources */,
 				FDCA6B8B228AAE4A008BB1CC /* Frameworks */,
 				FDCA6B8C228AAE4A008BB1CC /* Resources */,
@@ -284,6 +329,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		065FB699622839C2EA108D61 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PendelParkering-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93F7C36B34A66B15A02FDE7E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PendelParkering/Pods-PendelParkering-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PendelParkering/Pods-PendelParkering-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PendelParkering/Pods-PendelParkering-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7FFE4D5BE9663AA63744EB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PendelParkeringUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EEFBBA2324CCDAB1D6FA2D7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PendelParkeringTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FDCA6B6B228AAE48008BB1CC /* Sources */ = {
@@ -474,6 +605,7 @@
 		};
 		FDCA6B98228AAE4A008BB1CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A0BA870F0A65C57C852F35E /* Pods-PendelParkering.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -492,6 +624,7 @@
 		};
 		FDCA6B99228AAE4A008BB1CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD66412FE3ABDAD2857CC983 /* Pods-PendelParkering.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -510,6 +643,7 @@
 		};
 		FDCA6B9B228AAE4A008BB1CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF13FA5E647E67BE3A7567DB /* Pods-PendelParkeringTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -531,6 +665,7 @@
 		};
 		FDCA6B9C228AAE4A008BB1CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E282578CE9B92B732A025CB0 /* Pods-PendelParkeringTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -552,6 +687,7 @@
 		};
 		FDCA6B9E228AAE4A008BB1CC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0775F94DB5C91C44B9A6F46B /* Pods-PendelParkeringUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -572,6 +708,7 @@
 		};
 		FDCA6B9F228AAE4A008BB1CC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E458DBFE1BA63881A9C78B3 /* Pods-PendelParkeringUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
