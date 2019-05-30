@@ -15,69 +15,39 @@ class ParkingService {
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
     func getToken() {
-        let url = URL(string: "https://api.vasttrafik.se/token")!
-        var request = URLRequest(url: url)
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let parameters: [String: Any] = [
-            "grant_type": "client_credentials"
+        let parameters: Parameters = ["grant_type": "client_credentials"]      //This will be your parameter
+        let headers = [
+            "Content-Type": "application/x-www-form-urlencoded", "Authorization" : "Basic U0E1WjNxUnNpYlByRWloNkQ2YTY4SkZqNzZ3YTpQVnRmZzlCa2NZSzd5aUhjMjgyQktseHFPblVh"
         ]
+        let url = NSURL(string: "https://api.vasttrafik.se/token")!
         
-        request.httpBody = parameters.percentEscaped().data(using: .utf8)
-        request.addValue( "Basic U0E1WjNxUnNpYlByRWloNkQ2YTY4SkZqNzZ3YTpQVnRmZzlCa2NZSzd5aUhjMjgyQktseHFPblVh", forHTTPHeaderField: "Authorization")
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data,
-                let response = response as? HTTPURLResponse,
-                error == nil else {                                              // check for fundamental networking error
-                    print("error", error ?? "Unknown error")
-                    return
-            }
-            
-            guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
-                print("statusCode should be 2xx, but is \(response.statusCode)")
-                print("response = \(response)")
-                return
-            }
-            
-            let responseString = String(data: data, encoding: .utf8)
+        Alamofire.request("https://api.vasttrafik.se/token", method: .post, parameters: parameters, encoding: URLEncoding(), headers:headers ).response { response in
+            print(response.request)
+            print(response.response)
+            print(response.data)
             let decoder = JSONDecoder()
             do {
-                let token = try decoder.decode(Token.self, from: data)
+                self.token = try decoder.decode(Token.self, from: response.data!)
                 print("Success! \(token).")
             } catch {
-                
+
             }
-            print("responseString = \(responseString)")
-            
+            print(response.error)
         }
-        task.resume()
     }
     
-    func getParkings(){
-        guard let url = URL(string: "https://api.vasttrafik.se/spp/v3/parking") else {
-            
-            return
-        }
-        
-        Alamofire.request(url,
-                          method: .get,
-                          parameters: ["format": "json", "max": 30] )
-            .validate()
-            .responseJSON { response in
-                guard response.result.isSuccess else {
-                    print("Error while fetching remote rooms: \(String(describing: response.result.error)")
-                        completion(nil)
-                    return
-        
-//        @GET("/spp/v3/parkings")
-//        fun getParkingSpacesAsync(@Header("Authorization" ) authorization: String,
-//        @Query("format") format: String = "json",
-//        @Query( "lat") lat: Double? = null,
-//        @Query( "lon") lon: Double? = null,
-//        @Query("dist") dist: Int? = null,
-//        @Query("max") max: Int? = null): Deferred<Response<List<ParkingArea>>>
-    }
-    
+//    func getParkings(){
+//        guard let url = URL(string: "https://api.vasttrafik.se/spp/v3/parking") else {
+//
+//            return
+//        }
+//
+//        Alamofire.request(url,
+//                          method: )
+//
+//
+//    }
+//
     func isTokenValid() -> Bool {
         return false
     }
