@@ -25,29 +25,41 @@ class ParkingService {
             print(response.request)
             print(response.response)
             print(response.data)
+            print(response.error)
             let decoder = JSONDecoder()
             do {
                 self.token = try decoder.decode(Token.self, from: response.data!)
-                print("Success! \(token).")
+                print("Success! \(self.token).")
+                self.getParkings()
             } catch {
 
             }
-            print(response.error)
+          
         }
     }
     
-//    func getParkings(){
-//        guard let url = URL(string: "https://api.vasttrafik.se/spp/v3/parking") else {
-//
-//            return
-//        }
-//
-//        Alamofire.request(url,
-//                          method: )
-//
-//
-//    }
-//
+    func getParkings(){
+        let parameters: Parameters = ["format": "json"]      //This will be your parameter
+        let headers =  ["Authorization": "Bearer 2c7a76b0-8a92-3b9c-985a-b2ec4439aa4c"]
+    
+        Alamofire.request("https://api.vasttrafik.se/spp/v3/parkings", method: .get, parameters: parameters, headers: headers ).response { response in
+            print(response.request)
+            print(response.response)
+            print(response.data)
+            print(response.error)
+            let string = String(decoding: response.data!, as: UTF8.self)
+            print(string)
+            let decoder = JSONDecoder()
+            do {
+                self.token = try decoder.decode(Token.self, from: response.data!)
+                print("Success! \(self.token).")
+                self.getParkings()
+            } catch {
+                
+            }
+        }
+    }
+
     func isTokenValid() -> Bool {
         return false
     }
