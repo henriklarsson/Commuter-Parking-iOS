@@ -40,7 +40,7 @@ class ParkingService {
     
     func getParkings(){
         let parameters: Parameters = ["format": "json"]      //This will be your parameter
-        let headers =  ["Authorization": "Bearer 2c7a76b0-8a92-3b9c-985a-b2ec4439aa4c"]
+        let headers =  ["Authorization": "Bearer 6fd6c787-f4c5-36f4-9bc6-462c1fe5a30e"]
     
         Alamofire.request("https://api.vasttrafik.se/spp/v3/parkings", method: .get, parameters: parameters, headers: headers ).response { response in
             print(response.request)
@@ -51,8 +51,8 @@ class ParkingService {
             print(string)
             let decoder = JSONDecoder()
             do {
-                self.token = try decoder.decode(Token.self, from: response.data!)
-                print("Success! \(self.token).")
+                let parkings = try decoder.decode([ParkingArea].self, from: response.data!)
+                print("Success! \(parkings).")
                 self.getParkings()
             } catch {
                 
