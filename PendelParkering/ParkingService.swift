@@ -30,7 +30,9 @@ class ParkingService {
             do {
                 self.token = try decoder.decode(Token.self, from: response.data!)
                 print("Success! \(self.token).")
-                self.getParkings()
+                self.getParkings(completion: {result in
+                    print("status: ")
+                })
             } catch {
 
             }
@@ -38,7 +40,7 @@ class ParkingService {
         }
     }
     
-    func getParkings(){
+    func getParkings(completion :@escaping (Result<[ParkingArea]>)->Void){
         let parameters: Parameters = ["format": "json"]      //This will be your parameter
         let headers =  ["Authorization": "Bearer 6fd6c787-f4c5-36f4-9bc6-462c1fe5a30e"]
     
@@ -53,7 +55,8 @@ class ParkingService {
             do {
                 let parkings = try decoder.decode([ParkingArea].self, from: response.data!)
                 print("Success! \(parkings).")
-                self.getParkings()
+                let result = Result.success(parkings)
+                completion(result)
             } catch {
                 
             }
