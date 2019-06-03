@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -121,7 +121,6 @@
 				0775F94DB5C91C44B9A6F46B /* Pods-PendelParkeringUITests.debug.xcconfig */,
 				4E458DBFE1BA63881A9C78B3 /* Pods-PendelParkeringUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController  {
+class ViewController: UIViewController, CLLocationManagerDelegate {
     var parkings = [ParkingLot]()
     let viewModel = ParkingService()
+    var locationManager: CLLocationManager?
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -27,6 +30,12 @@ class ViewController: UIViewController  {
 //        public var freeSpaces: Int?
         tableView.delegate = self
         tableView.dataSource = self
+        locationManager = CLLocationManager()
+        locationManager?.delegate = self
+        locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        
+        locationManager?.requestWhenInUseAuthorization()
+        locationManager?.startUpdatingLocation()
         viewModel.getParkings(completion: { result in
             self.parkings.removeAll()
             self.parkings.append(contentsOf: result.value!)
@@ -49,7 +58,10 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         // #warning Incomplete implementation, return the number of rows
         return parkings.count
     }
-    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
+        print("locations = \(locValue.latitude) \(locValue.longitude)")
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! ParkingCell
