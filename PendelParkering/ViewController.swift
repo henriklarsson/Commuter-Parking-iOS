@@ -27,11 +27,8 @@ class ViewController: UIViewController  {
 //        public var freeSpaces: Int?
         tableView.delegate = self
         tableView.dataSource = self
-    
-       
         viewModel.getParkings(completion: { result in
             self.parkings.removeAll()
-    
             self.parkings.append(contentsOf: result.value!)
             self.tableView.reloadData()
         })
@@ -60,14 +57,12 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         cell.title?.text = parking.name
         cell.subtitleOne.text = "Parking spaces: \(parking.totalCapacity)"
         if (parking.freeSpaces != nil){
-            cell.subtitleTwo.text = "\(parking.freeSpaces)"
+            cell.subtitleTwo.text = "Free spaces: \(parking.freeSpaces!)"
             cell.subtitleTwo.isHidden = false
         } else {
             cell.subtitleTwo.isHidden = true
         }
-        
-        
-        
+    
         return cell
     }
 }
