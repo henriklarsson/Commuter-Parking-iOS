@@ -12,14 +12,16 @@ import Alamofire
 class ParkingService {
     
     var token: Token? = nil
+    var tokenTimeStamp : Int32 = 0
     let defaultSession = URLSession(configuration: .default)
     var dataTask: URLSessionDataTask?
-    func getToken() {
+    
+    func getToken( completion: @escaping (Result<Token>) -> Void) {
         let parameters: Parameters = ["grant_type": "client_credentials"]      //This will be your parameter
         let headers = [
             "Content-Type": "application/x-www-form-urlencoded", "Authorization" : "Basic U0E1WjNxUnNpYlByRWloNkQ2YTY4SkZqNzZ3YTpQVnRmZzlCa2NZSzd5aUhjMjgyQktseHFPblVh"
         ]
-        let url = NSURL(string: "https://api.vasttrafik.se/token")!
+        
         
         Alamofire.request("https://api.vasttrafik.se/token", method: .post, parameters: parameters, encoding: URLEncoding(), headers:headers ).response { response in
             print(response.request)
@@ -29,32 +31,45 @@ class ParkingService {
             let decoder = JSONDecoder()
             do {
                 self.token = try decoder.decode(Token.self, from: response.data!)
+                let result = Result.success(self.token!)
+                completion(result)
                 print("Success! \(self.token).")
-                self.getParkings(completion: {result in
-                    print("status: ")
-                })
             } catch {
 
             }
           
         }
     }
-    
-    func getParkings(completion :@escaping (Result<[ParkingArea]>)->Void){
-        let parameters: Parameters = ["format": "json"]      //This will be your parameter
-        let headers =  ["Authorization": "Bearer 6fd6c787-f4c5-36f4-9bc6-462c1fe5a30e"]
-    
+//    @Query("format") format: String = "json",
+//    @Query( "lat") lat: Double? = null,
+//    @Query( "lon") lon: Double? = null,
+//    @Query("dist") dist: Int? = null,
+//    @Query("max") max: Int? = null): Deferred
+    private func fetchParkings(lat: Double? = nil, long: Double? = nil, dist: Int? = nil, max: Int? = nil, completion :@escaping (Result<[ParkingLot]>)->Void){
+        
+        var parameters: Parameters = ["format": "json"]//This will be your parameter
+        parameters["lat"] = lat
+        parameters["long"] = long
+        parameters["dist"] = dist
+        parameters["max"] = max
+        let headers =  ["Authorization": "Bearer " + token!.accessToken]
+        
         Alamofire.request("https://api.vasttrafik.se/spp/v3/parkings", method: .get, parameters: parameters, headers: headers ).response { response in
-            print(response.request)
-            print(response.response)
-            print(response.data)
-            print(response.error)
+//            print(response.request)
+//            print(response.response)
+//            print(response.data)
+//            print(response.error)
             let string = String(decoding: response.data!, as: UTF8.self)
             print(string)
             let decoder = JSONDecoder()
             do {
-                let parkings = try decoder.decode([ParkingArea].self, from: response.data!)
-                print("Success! \(parkings).")
+                let parkingAreas = try decoder.decode([ParkingArea].self, from: response.data!)
+                var parkings = [ParkingLot]()
+                parkingAreas.forEach{ parkingArea in
+                    parkingArea.parkingLots.forEach{ parkingLot in
+                        parkings.append(parkingLot)
+                    }
+                }
                 let result = Result.success(parkings)
                 completion(result)
             } catch {
@@ -62,9 +77,28 @@ class ParkingService {
             }
         }
     }
+    func getParkings(lat: Double? = nil, long: Double? = nil, dist: Int? = nil, max: Int? = nil, completion :@escaping (Result<[ParkingLot]>)->Void){
+        
+        if (isTokenValid()) {
+           self.fetchParkings(lat: lat, long: long, dist: dist, max: max, completion: completion)
+        } else {
+            getToken(completion: { response in
+                self.fetchParkings(lat: lat, long: long, dist: dist, max: max, completion: completion)
+            })
+        }
+        
+        
+        
+       
+    }
 
     func isTokenValid() -> Bool {
-        return false
+        // rewrite with guard
+        if (token != nil){
+            return true
+        } else {
+            return false
+        }
     }
 
 }

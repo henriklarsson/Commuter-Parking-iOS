@@ -10,8 +10,9 @@ import UIKit
 
 class ViewController: UIViewController  {
     var parkings = [ParkingLot]()
-
+    let viewModel = ParkingService()
     @IBOutlet weak var tableView: UITableView!
+    
     
 
     override func viewDidLoad() {
@@ -27,11 +28,14 @@ class ViewController: UIViewController  {
         tableView.delegate = self
         tableView.dataSource = self
     
-        let parkingType = ParkingType(name: ParkingType.Name.smartcarpark, number: 1)
-        let parking1 = ParkingLot.init(name: "ParkingSpaceName", totalCapacity: 2, parkingType: parkingType, lat: Double(2), _id: 3, parkingCameras: nil, lon: Double(3), isRestrictedByBarrier: false, freeSpaces: 2)
-        parkings.append(parking1)
-        let ps = ParkingService()
-        ps.getToken()
+       
+        viewModel.getParkings(completion: { result in
+            self.parkings.removeAll()
+    
+            self.parkings.append(contentsOf: result.value!)
+            self.tableView.reloadData()
+        })
+        
         
         // Do any additional setup after loading the view.
     }
@@ -52,8 +56,17 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! ParkingCell
+        let parking = parkings[indexPath.row]
+        cell.title?.text = parking.name
+        cell.subtitleOne.text = "Parking spaces: \(parking.totalCapacity)"
+        if (parking.freeSpaces != nil){
+            cell.subtitleTwo.text = "\(parking.freeSpaces)"
+            cell.subtitleTwo.isHidden = false
+        } else {
+            cell.subtitleTwo.isHidden = true
+        }
         
-        cell.title?.text = parkings[indexPath.row].name
+        
         
         return cell
     }
