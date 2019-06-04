@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import CoreLocation
 
 class ParkingService {
     
@@ -45,11 +46,11 @@ class ParkingService {
 //    @Query( "lon") lon: Double? = null,
 //    @Query("dist") dist: Int? = null,
 //    @Query("max") max: Int? = null): Deferred
-    private func fetchParkings(lat: Double? = nil, long: Double? = nil, dist: Int? = nil, max: Int? = nil, completion :@escaping (Result<[ParkingLot]>)->Void){
+    private func fetchParkings(location: CLLocationCoordinate2D? , dist: Int? = nil, max: Int? = nil, completion :@escaping (Result<[ParkingLot]>)->Void){
         
         var parameters: Parameters = ["format": "json"]//This will be your parameter
-        parameters["lat"] = lat
-        parameters["long"] = long
+        parameters["lat"] = location?.latitude
+        parameters["long"] = location?.longitude
         parameters["dist"] = dist
         parameters["max"] = max
         let headers =  ["Authorization": "Bearer " + token!.accessToken]
@@ -60,7 +61,7 @@ class ParkingService {
 //            print(response.data)
 //            print(response.error)
             let string = String(decoding: response.data!, as: UTF8.self)
-            print(string)
+    
             let decoder = JSONDecoder()
             do {
                 let parkingAreas = try decoder.decode([ParkingArea].self, from: response.data!)
@@ -70,6 +71,16 @@ class ParkingService {
                         parkings.append(parkingLot)
                     }
                 }
+                parkings.sort {
+            
+                        let location0 = CLLocationCoordinate2D(latitude: $0.lat, longitude: $0.lon)
+                        let location1 = CLLocationCoordinate2D(latitude: $1.lat, longitude: $1.lon)
+                    if (location0 != nil && location1 != nil && location != nil){
+                        return location0.distance(from: location!) < location1.distance(from: location!)
+                    } else {
+                        return false
+                    }
+               }
                 let result = Result.success(parkings)
                 completion(result)
             } catch {
@@ -77,18 +88,15 @@ class ParkingService {
             }
         }
     }
-    func getParkings(lat: Double? = nil, long: Double? = nil, dist: Int? = nil, max: Int? = nil, completion :@escaping (Result<[ParkingLot]>)->Void){
+    func getParkings(location: CLLocationCoordinate2D?, dist: Int? = nil, max: Int? = nil, completion :@escaping (Result<[ParkingLot]>)->Void){
         
         if (isTokenValid()) {
-           self.fetchParkings(lat: lat, long: long, dist: dist, max: max, completion: completion)
+            self.fetchParkings(location: location, dist: dist, max: max, completion: completion)
         } else {
             getToken(completion: { response in
-                self.fetchParkings(lat: lat, long: long, dist: dist, max: max, completion: completion)
+                self.fetchParkings(location: location, dist: dist, max: max, completion: completion)
             })
         }
-        
-        
-        
        
     }
 
@@ -122,4 +130,11 @@ extension CharacterSet {
         allowed.remove(charactersIn: "\(generalDelimitersToEncode)\(subDelimitersToEncode)")
         return allowed
     }()
+}
+extension CLLocationCoordinate2D {
+    //distance in meters, as explained in CLLoactionDistance definition
+    func distance(from: CLLocationCoordinate2D) -> CLLocationDistance {
+        let destination=CLLocation(latitude:from.latitude,longitude:from.longitude)
+        return CLLocation(latitude: latitude, longitude: longitude).distance(from: destination)
+    }
 }

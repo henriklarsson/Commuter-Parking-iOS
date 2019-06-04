@@ -13,6 +13,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     var parkings = [ParkingLot]()
     let viewModel = ParkingService()
     var locationManager: CLLocationManager?
+    var currentLocation: CLLocationCoordinate2D?
+    var initWithLocation = false
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,7 +38,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.startUpdatingLocation()
-        viewModel.getParkings(completion: { result in
+        viewModel.getParkings(location: currentLocation, dist: 15, max: nil, completion: { result in
             self.parkings.removeAll()
             self.parkings.append(contentsOf: result.value!)
             self.tableView.reloadData()
@@ -61,6 +63,17 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let locValue: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         print("locations = \(locValue.latitude) \(locValue.longitude)")
+        self.currentLocation = locValue
+        self.locationManager?.stopUpdatingLocation()
+        if (!initWithLocation){
+            self.initWithLocation = true
+            viewModel.getParkings(location: currentLocation, dist: 15, max: nil, completion: { result in
+                self.parkings.removeAll()
+                self.parkings.append(contentsOf: result.value!)
+                self.tableView.reloadData()
+            })
+        }
+ 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
