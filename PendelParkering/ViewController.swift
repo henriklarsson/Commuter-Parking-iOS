@@ -18,7 +18,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    
+    func showModal() {
+        let modalViewController = ModalViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+//        modalViewController.view.backgroundColor = UIColor.red
+        present(modalViewController, animated: true)
+
+    }
 
     override func viewDidLoad() {
 //        super.viewDidLoad()
@@ -42,6 +48,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.parkings.removeAll()
             self.parkings.append(contentsOf: result.value!)
             self.tableView.reloadData()
+            self.showModal()
         })
         
         

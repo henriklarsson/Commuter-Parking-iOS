@@ -6,6 +6,7 @@ target 'PendelParkering' do
   use_frameworks!
   # Pods for PendelParkering
    pod 'Alamofire', '~> 4.8.1'
+   pod 'AlamofireImage', '~> 3.5'
   
 
   target 'PendelParkeringTests' do

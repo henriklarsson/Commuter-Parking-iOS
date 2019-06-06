@@ -10,6 +10,7 @@
 		37CCE2936B8CE52D9A596A56 /* Pods_PendelParkering.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2209C7FB629C23FA41134083 /* Pods_PendelParkering.framework */; };
 		860F05E4DA02FB729A1A109F /* Pods_PendelParkeringTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38395F0AAFA3597D77EC2929 /* Pods_PendelParkeringTests.framework */; };
 		DFF1C9D85F10BA3B7DF80EC7 /* Pods_PendelParkeringUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4C0A8C20752D3A2999D8D42 /* Pods_PendelParkeringUITests.framework */; };
+		FDC7FF6822A6857100827EAB /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDC7FF6722A6857100827EAB /* ModalViewController.swift */; };
 		FDCA6B73228AAE48008BB1CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */; };
 		FDCA6B75228AAE48008BB1CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCA6B74228AAE48008BB1CC /* ViewController.swift */; };
 		FDCA6B78228AAE48008BB1CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDCA6B76228AAE48008BB1CC /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		D4C0A8C20752D3A2999D8D42 /* Pods_PendelParkeringUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PendelParkeringUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD66412FE3ABDAD2857CC983 /* Pods-PendelParkering.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkering.release.xcconfig"; path = "Target Support Files/Pods-PendelParkering/Pods-PendelParkering.release.xcconfig"; sourceTree = "<group>"; };
 		E282578CE9B92B732A025CB0 /* Pods-PendelParkeringTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PendelParkeringTests.release.xcconfig"; path = "Target Support Files/Pods-PendelParkeringTests/Pods-PendelParkeringTests.release.xcconfig"; sourceTree = "<group>"; };
+		FDC7FF6722A6857100827EAB /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		FDCA6B6F228AAE48008BB1CC /* PendelParkering.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PendelParkering.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCA6B72228AAE48008BB1CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDCA6B74228AAE48008BB1CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 				FDCA6BB72293FAF8008BB1CC /* ParkingCell.swift */,
 				FDCA6BB92295599B008BB1CC /* ParkingService.swift */,
 				FDCA6BBB2295C4D6008BB1CC /* Token.swift */,
+				FDC7FF6722A6857100827EAB /* ModalViewController.swift */,
 			);
 			path = PendelParkering;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				FDCA6BB82293FAF8008BB1CC /* ParkingCell.swift in Sources */,
 				FDCA6BB42292797D008BB1CC /* ParkingCamera.swift in Sources */,
 				FDCA6BB12292797D008BB1CC /* ParkingLot.swift in Sources */,
+				FDC7FF6822A6857100827EAB /* ModalViewController.swift in Sources */,
 				FDCA6BB22292797D008BB1CC /* ParkingArea.swift in Sources */,
 				FDCA6BB52292797D008BB1CC /* Departure.swift in Sources */,
 				FDCA6BB02292797D008BB1CC /* Destination.swift in Sources */,
