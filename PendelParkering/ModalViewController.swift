@@ -13,6 +13,9 @@ import AlamofireImage
 
 class ModalViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
+    var parkingService: ParkingService? = nil
+    var url: String? = nil
+    
     
     
     override func viewDidLoad() {
