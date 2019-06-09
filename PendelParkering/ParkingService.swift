@@ -108,7 +108,17 @@ class ParkingService {
             return false
         }
     }
+    func downloadImage(imageUrl: String, completion :@escaping (Result<UIImage>) -> Void) {
+        let headers =  ["Authorization": "Bearer " + token!.accessToken]
+        Alamofire.request(imageUrl, method: .get, headers: headers).responseImage { response in
+            guard let image = response.result.value else {
+                print("error")
+                return
+            }
+            // Do stuff with your image
+        }
 
+}
 }
 extension Dictionary {
     func percentEscaped() -> String {

@@ -21,6 +21,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func showModal() {
         let modalViewController = ModalViewController()
         modalViewController.modalPresentationStyle = .overCurrentContext
+        modalViewController.parkingService = viewModel
 //        modalViewController.view.backgroundColor = UIColor.red
         present(modalViewController, animated: true)
 
