@@ -18,7 +18,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    func showModal() {
+    func showModal(cameraHandel: String) {
         let modalViewController = ModalViewController()
         modalViewController.modalPresentationStyle = .overCurrentContext
         modalViewController.parkingService = viewModel
@@ -37,8 +37,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 //        public var isRestrictedByBarrier: Bool
 //        /** Number of free spaces. Only available if ParkingType Name is SMARTCARPARK */
 //        public var freeSpaces: Int?
-        tableView.delegate = self
-        tableView.dataSource = self
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
         locationManager = CLLocationManager()
         locationManager?.delegate = self
         locationManager?.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
@@ -49,7 +49,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             self.parkings.removeAll()
             self.parkings.append(contentsOf: result.value!)
             self.tableView.reloadData()
-            self.showModal()
         })
         
         
@@ -83,11 +82,20 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         }
  
     }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let parking = parkings[indexPath.row]
+//        let handle =
+//        showModal()
+//        print("Clicked \(indexPath)")
+//    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath) as! ParkingCell
+        print("userinteractionenavbled: \(cell.isUserInteractionEnabled)")
         let parking = parkings[indexPath.row]
         cell.title?.text = parking.name
+        cell.cameraImageOne.isHidden = true
+        cell.cameraImageTwo.isHidden = true
         cell.subtitleOne.text = "Parking spaces: \(parking.totalCapacity)"
         if (parking.freeSpaces != nil){
             cell.subtitleTwo.text = "Free spaces: \(parking.freeSpaces!)"
@@ -95,8 +103,41 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         } else {
             cell.subtitleTwo.isHidden = true
         }
-    
+        if (parking.parkingCameras != nil){
+            let camera = parking.parkingCameras!
+            if (camera.count == 1){
+                cell.cameraImageOne.isHidden = false
+            
+            }
+            if (camera.count == 2){
+                cell.cameraImageOne.isHidden = false
+                cell.cameraImageTwo.isHidden = false
+            }
+        }
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        cell.cameraImageOne.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        cell.cameraImageOne.isUserInteractionEnabled = true
         return cell
+    }
+    @objc func imageTapped(gesture: UIGestureRecognizer) {
+        // if the tapped view is a UIImageView then set it to imageview
+        if (gesture.view as? UIImageView) != nil {
+            print("Image Tapped")
+            //Here you can initiate your new ViewController
+            
+        }
+    }
+}
+
+extension UIGestureRecognizer {
+    var url: String {
+        get {
+            return self.url
+        }
+        set(newValue) {
+            self.url = newValue
+        }
     }
 }
 
