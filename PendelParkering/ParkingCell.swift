@@ -13,8 +13,8 @@ class ParkingCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var subtitleOne: UILabel!
     @IBOutlet weak var subtitleTwo: UILabel!
-    @IBOutlet weak var cameraImageOne: UIImageView!
-    @IBOutlet weak var cameraImageTwo: UIImageView!
+    @IBOutlet weak var cameraImageOne: CustomImageView!
+    @IBOutlet weak var cameraImageTwo: CustomImageView!
     
 
 }

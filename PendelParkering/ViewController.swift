@@ -107,36 +107,34 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
             let camera = parking.parkingCameras!
             if (camera.count == 1){
                 cell.cameraImageOne.isHidden = false
+                cell.cameraImageOne.url = "/\(parking._id)/1"
             
             }
             if (camera.count == 2){
                 cell.cameraImageOne.isHidden = false
+                cell.cameraImageOne.url = "/\(parking._id)/1"
                 cell.cameraImageTwo.isHidden = false
+                cell.cameraImageTwo.url = "/\(parking._id)/2"
             }
         }
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
         cell.cameraImageOne.addGestureRecognizer(tapGesture)
         // make sure imageView can be interacted with by user
         cell.cameraImageOne.isUserInteractionEnabled = true
+        cell.cameraImageTwo.addGestureRecognizer(tapGesture)
+        // make sure imageView can be interacted with by user
+        cell.cameraImageTwo.isUserInteractionEnabled = true
+        
         return cell
     }
     @objc func imageTapped(gesture: UIGestureRecognizer) {
         // if the tapped view is a UIImageView then set it to imageview
-        if (gesture.view as? UIImageView) != nil {
-            print("Image Tapped")
+        
+        if (gesture.view as? CustomImageView) != nil {
+            let image = gesture.view as? CustomImageView
+            print("Image Tapped" + image!.url!)
             //Here you can initiate your new ViewController
             
-        }
-    }
-}
-
-extension UIGestureRecognizer {
-    var url: String {
-        get {
-            return self.url
-        }
-        set(newValue) {
-            self.url = newValue
         }
     }
 }
