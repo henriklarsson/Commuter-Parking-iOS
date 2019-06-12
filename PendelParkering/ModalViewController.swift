@@ -21,8 +21,8 @@ class ModalViewController: UIViewController {
     override func viewDidLoad() {
 //        imageView.dowloadFromServer(link: "http://html.cita.illinois.edu/text/test/images/img-ais3.2.png")
      
-        let url = "https://api.vasttrafik.se/spp/v3/parkingImages/5030/1"
-        parkingService?.downloadImage(imageUrl: url, completion: {result in
+        let currentUrl = "https://api.vasttrafik.se/spp/v3/parkingImages" + self.url!
+        parkingService?.downloadImage(imageUrl: currentUrl, completion: {result in
             let size = CGSize(width: 400, height: 400)
             let cgRect = CGRect(x: 0, y: 0, width: 100, height: 100)
             let imageView = UIImageView(frame: cgRect)

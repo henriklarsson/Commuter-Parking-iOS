@@ -22,6 +22,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let modalViewController = ModalViewController()
         modalViewController.modalPresentationStyle = .overCurrentContext
         modalViewController.parkingService = viewModel
+        modalViewController.url = cameraHandel
 //        modalViewController.view.backgroundColor = UIColor.red
         present(modalViewController, animated: true)
 
@@ -117,11 +118,12 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
                 cell.cameraImageTwo.url = "/\(parking._id)/2"
             }
         }
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
-        cell.cameraImageOne.addGestureRecognizer(tapGesture)
+        let tapGesture1 = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        let tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(ViewController.imageTapped(gesture:)))
+        cell.cameraImageOne.addGestureRecognizer(tapGesture1)
         // make sure imageView can be interacted with by user
         cell.cameraImageOne.isUserInteractionEnabled = true
-        cell.cameraImageTwo.addGestureRecognizer(tapGesture)
+        cell.cameraImageTwo.addGestureRecognizer(tapGesture2)
         // make sure imageView can be interacted with by user
         cell.cameraImageTwo.isUserInteractionEnabled = true
         
@@ -133,6 +135,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
         if (gesture.view as? CustomImageView) != nil {
             let image = gesture.view as? CustomImageView
             print("Image Tapped" + image!.url!)
+            showModal(cameraHandel: image!.url!)
             //Here you can initiate your new ViewController
             
         }

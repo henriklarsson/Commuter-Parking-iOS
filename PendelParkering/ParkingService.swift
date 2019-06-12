@@ -115,6 +115,7 @@ class ParkingService {
                 print("error")
                 return
             }
+            completion(Result.success(image))
             // Do stuff with your image
         }
 
