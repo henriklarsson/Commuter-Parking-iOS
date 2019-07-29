@@ -19,13 +19,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var tableView: UITableView!
     
     func showModal(cameraHandel: String) {
-        let modalViewController = ModalViewController()
+        let modalViewController = storyboard?.instantiateViewController(withIdentifier: "modal") as! ModalViewController
         modalViewController.modalPresentationStyle = .overCurrentContext
         modalViewController.parkingService = viewModel
         modalViewController.url = cameraHandel
-//        modalViewController.view.backgroundColor = UIColor.red
         present(modalViewController, animated: true)
-
+       
     }
 
     override func viewDidLoad() {

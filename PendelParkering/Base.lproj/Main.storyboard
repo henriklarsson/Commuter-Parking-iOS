@@ -123,28 +123,32 @@
         <!--Modal View Controller-->
         <scene sceneID="fEC-fe-Rxv">
             <objects>
-                <viewController id="7oB-sg-9x9" customClass="ModalViewController" customModule="PendelParkering" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="modal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7oB-sg-9x9" customClass="ModalViewController" customModule="PendelParkering" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2FO-D7-auw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_camera_2" translatesAutoresizingMaskIntoConstraints="NO" id="a6S-ja-Dg7">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tiV-W8-dCS">
+                                <rect key="frame" x="20" y="59" width="374" height="803"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="a6S-ja-Dg7" firstAttribute="centerX" secondItem="2FO-D7-auw" secondAttribute="centerX" id="7Jh-Ra-cme"/>
-                            <constraint firstItem="a6S-ja-Dg7" firstAttribute="leading" secondItem="7tG-vT-wVU" secondAttribute="leading" constant="87" id="9mA-T5-xxa"/>
-                            <constraint firstItem="a6S-ja-Dg7" firstAttribute="centerY" secondItem="2FO-D7-auw" secondAttribute="centerY" id="fBC-yu-P2R"/>
-                            <constraint firstItem="a6S-ja-Dg7" firstAttribute="top" secondItem="7tG-vT-wVU" secondAttribute="top" constant="340" id="yWc-ZZ-16O"/>
+                            <constraint firstItem="tiV-W8-dCS" firstAttribute="centerX" secondItem="2FO-D7-auw" secondAttribute="centerX" id="6V6-oi-K8E"/>
+                            <constraint firstItem="tiV-W8-dCS" firstAttribute="centerY" secondItem="2FO-D7-auw" secondAttribute="centerY" id="OCd-AA-SCT"/>
+                            <constraint firstItem="tiV-W8-dCS" firstAttribute="centerY" secondItem="2FO-D7-auw" secondAttribute="centerY" id="jwQ-CM-Vqm"/>
+                            <constraint firstItem="tiV-W8-dCS" firstAttribute="centerX" secondItem="2FO-D7-auw" secondAttribute="centerX" id="mXz-Rp-tgJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7tG-vT-wVU"/>
                     </view>
+                    <connections>
+                        <outlet property="parkingImageView" destination="tiV-W8-dCS" id="7wM-66-vsE"/>
+                        <outlet property="rootView" destination="2FO-D7-auw" id="fq7-Pu-Lww"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sj8-kX-5kT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="957" y="106"/>
+            <point key="canvasLocation" x="956.52173913043487" y="105.80357142857143"/>
         </scene>
     </scenes>
     <resources>
